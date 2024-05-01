@@ -1,0 +1,165 @@
+/* Estilos generales */
+
+:root {
+  
+  --colorBorde: steelblue;
+  --colorBorde1: rgb(23, 24, 26);
+  --anchoLateral: 30rem;
+  --anchoLateral1: 60rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*1 rem = 10px*/
+}
+
+/* Navegacion */
+#navegacion {
+  border: 1px solid var(--colorBorde);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navegacion #logo {
+  font-size: 4rem;
+  color: var(--colorBorde);
+  font-weight: 900;
+  font-family: cursive;
+}
+#navegacion #menu {
+  /* width: 500px; */
+}
+
+#navegacion #menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+#navegacion #menu ul li {
+  font-size: 1.6rem;
+  border: 1px solid var(--colorBorde);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* header*/
+#cabecera {
+  border: 1px solid var(--colorBorde);
+  height: 10rem;
+  background-color: var(--colorBorde);
+}
+
+/* principal*/
+#principal {
+  /* border: 1px solid var(--colorBorde); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+}
+
+#principal #lateral {
+  border: 1px solid var(--colorBorde);
+  width: var(--anchoLateral);
+  height: 420px;
+  margin-right: 1rem;
+}
+
+#principal #central {
+  border: 1px solid var(--colorBorde);
+  width: calc(100vw - var(--anchoLateral));
+  height: 420px;
+}
+
+/* pie*/
+#pie {
+  border: 1px solid var(--colorBorde);
+  padding: 1rem;
+  margin-top: 5px;
+}
+
+/* responsivo para tablets */
+/* empezamos con los media cueris */
+@media (max-width: 768px) {
+  /* principal*/
+  #principal {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  #principal #central {
+    width: 100%;
+    height: 320px;
+  }
+  #principal #lateral {
+    width: 100%;
+    height: 220px;
+    margin-top: 1rem;
+  }
+}
+
+/* responsivo para Celulares */
+@media (max-width: 576px) {
+  /* Navegacion */
+  #navegacion {
+    display: inline-block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  #navegacion #logo {
+    font-size: 4rem;
+    color: var(--colorBorde);
+    font-weight: 900;
+    font-family: cursive;
+    padding-left: 30%;
+    color: rgb(0, 110, 255);
+  }
+
+  #navegacion #menu ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #navegacion #menu ul li {
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    text-align: center;
+    width: 99%;
+    max-width: 99%;
+    background-color: rgb(0, 110, 255);
+    margin-left: 2px;
+  }
+
+  /* header*/
+  #cabecera {
+    border: 1px solid var(--colorBorde);
+    height: 10rem;
+    background-color: rgb(0, 110, 255);
+  }
+
+
+  
+}
